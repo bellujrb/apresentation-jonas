@@ -544,35 +544,6 @@ export const slides = [
         </div>
       </>
     )
-  },
-
-  // Slide 14 - CTA Final
-  {
-    name: "Próximos Passos",
-    content: (
-      <div className="flex flex-col items-center justify-center min-h-[70vh] text-center">
-        <div className="mb-8 opacity-0 animate-fade-in-up">
-          <div className="w-20 h-20 rounded-2xl bg-gradient-primary flex items-center justify-center shadow-glow mx-auto">
-            <ArrowUpRight className="w-10 h-10 text-primary-foreground" />
-          </div>
-        </div>
-        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 opacity-0 animate-fade-in-up animate-delay-100">
-          Pronto para<br />
-          <span className="text-gradient-primary">escalar?</span>
-        </h1>
-        <p className="text-xl text-muted-foreground max-w-2xl leading-relaxed mb-12 opacity-0 animate-fade-in-up animate-delay-200">
-          Converse com nossa equipe e descubra como a Dadus.AI pode transformar sua operação de e-commerce
-        </p>
-        <div className="flex flex-col sm:flex-row items-center gap-4 opacity-0 animate-fade-in-up animate-delay-300">
-          <div className="px-8 py-4 rounded-xl bg-gradient-primary text-primary-foreground font-semibold text-lg shadow-glow cursor-pointer hover:opacity-90 transition-opacity">
-            Agendar demonstração
-          </div>
-          <div className="px-8 py-4 rounded-xl bg-secondary text-foreground font-semibold text-lg border border-border cursor-pointer hover:bg-secondary/80 transition-colors">
-            Falar com especialista
-          </div>
-        </div>
-      </div>
-    )
   }
 ];
 
