@@ -64,7 +64,7 @@ export const slides = [
           <span className="text-foreground">Completo</span>
         </h2>
         <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground opacity-0 animate-fade-in-up animate-delay-300">
-          Kitsy
+          Kidsy
         </p>
       </div>
     )
