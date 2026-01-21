@@ -650,7 +650,22 @@ export const slides = [
         <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl opacity-0 animate-fade-in-up animate-delay-300">
           Espaço aberto para dúvidas, comentários adicionais e alinhamentos
         </p>
-        <div className="mt-12 flex items-center gap-3 text-muted-foreground opacity-0 animate-fade-in-up animate-delay-400">
+        
+        {/* Link to Strategic Document */}
+        <a 
+          href="https://docs.google.com/document/d/1TdXcPgWmtbjjZ9y0VZE0fgXAshU19z99u1odOaAMvC4/edit?usp=sharing"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-10 flex items-center gap-3 bg-primary/10 hover:bg-primary/20 border border-primary/30 rounded-xl px-6 py-4 transition-all duration-300 opacity-0 animate-fade-in-up animate-delay-400 group"
+        >
+          <FileText className="w-6 h-6 text-primary group-hover:scale-110 transition-transform" />
+          <div className="text-left">
+            <p className="text-sm font-medium text-foreground">Documento Estratégico Completo</p>
+            <p className="text-xs text-muted-foreground">Acesse o material aprofundado com áudios e análises detalhadas</p>
+          </div>
+        </a>
+        
+        <div className="mt-8 flex items-center gap-3 text-muted-foreground opacity-0 animate-fade-in-up animate-delay-500">
           <MessageSquare className="w-5 h-5" />
           <span>Compartilhe suas considerações</span>
         </div>
