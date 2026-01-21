@@ -34,7 +34,8 @@ import {
   Timer,
   Users,
   Rocket,
-  HelpCircle
+  HelpCircle,
+  Calendar
 } from "lucide-react";
 import { SlideTitle } from "./SlideTitle";
 import { SlideCard } from "./SlideCard";
@@ -208,9 +209,9 @@ export const slides = [
         <div className="grid md:grid-cols-3 gap-6 mt-8">
           <div className="bg-gradient-card border border-accent/30 rounded-2xl p-6 opacity-0 animate-fade-in-up animate-delay-200">
             <Search className="w-10 h-10 text-accent mb-4" />
-            <h3 className="text-lg font-semibold text-foreground mb-2">Bipagem Deficiente</h3>
+            <h3 className="text-lg font-semibold text-foreground mb-2">Gestão de estoque ineficiente</h3>
             <p className="text-sm text-muted-foreground leading-relaxed">
-              Motoristas com pressa não escaneiam (bipam) os produtos no momento da coleta, gerando inconsistências.
+              Falta de controle adequado no fluxo de entrada e saída, gerando inconsistências massivas no inventário.
             </p>
           </div>
           <div className="bg-gradient-card border border-red-500/30 rounded-2xl p-6 opacity-0 animate-fade-in-up animate-delay-300">
@@ -576,10 +577,56 @@ export const slides = [
             </p>
           </div>
         </div>
-        <div className="mt-10 p-4 bg-primary/5 border border-primary/20 rounded-xl opacity-0 animate-fade-in-up animate-delay-500">
-          <p className="text-center text-foreground">
-            <span className="text-primary font-semibold">Objetivo:</span> Iniciar a transformação de forma incremental e validada
-          </p>
+        
+        {/* Roadmap Timeline */}
+        <div className="mt-10 bg-gradient-card border border-primary/20 rounded-2xl p-6 opacity-0 animate-fade-in-up animate-delay-500">
+          <div className="flex items-center gap-2 mb-6">
+            <Calendar className="w-5 h-5 text-primary" />
+            <h4 className="text-lg font-semibold text-foreground">Linha do Tempo de Implementação</h4>
+          </div>
+          
+          {/* Timeline Bar */}
+          <div className="relative">
+            {/* Background bar */}
+            <div className="h-3 bg-muted rounded-full overflow-hidden">
+              <div className="flex h-full">
+                <div className="w-1/2 bg-primary/80" />
+                <div className="w-1/2 bg-accent/80" />
+              </div>
+            </div>
+            
+            {/* Month markers */}
+            <div className="flex justify-between mt-2">
+              <div className="text-center">
+                <div className="w-3 h-3 bg-primary rounded-full mx-auto mb-1" />
+                <span className="text-xs text-muted-foreground">Mês 1</span>
+              </div>
+              <div className="text-center">
+                <div className="w-3 h-3 bg-primary rounded-full mx-auto mb-1" />
+                <span className="text-xs text-muted-foreground">Mês 2</span>
+              </div>
+              <div className="text-center">
+                <div className="w-3 h-3 bg-accent rounded-full mx-auto mb-1" />
+                <span className="text-xs text-muted-foreground">Mês 3</span>
+              </div>
+              <div className="text-center">
+                <div className="w-3 h-3 bg-accent rounded-full mx-auto mb-1" />
+                <span className="text-xs text-muted-foreground">Mês 4</span>
+              </div>
+            </div>
+            
+            {/* Phase labels */}
+            <div className="flex mt-4 gap-4">
+              <div className="flex-1 bg-primary/10 border border-primary/30 rounded-lg p-3 text-center">
+                <p className="text-sm font-medium text-primary">Desenvolvimento de Workflows</p>
+                <p className="text-xs text-muted-foreground mt-1">Construção das automações e integrações</p>
+              </div>
+              <div className="flex-1 bg-accent/10 border border-accent/30 rounded-lg p-3 text-center">
+                <p className="text-sm font-medium text-accent">Implementação & Onboarding</p>
+                <p className="text-xs text-muted-foreground mt-1">Deploy, treinamento e ajustes com o time</p>
+              </div>
+            </div>
+          </div>
         </div>
       </>
     )
