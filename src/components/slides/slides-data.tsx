@@ -501,9 +501,10 @@ export const slides = [
           Resultado<br />
           <span className="text-gradient-primary">esperado</span>
         </SlideTitle>
-        <div className="grid md:grid-cols-2 gap-12 mt-12">
-          <div className="opacity-0 animate-fade-in-up animate-delay-200">
-            <h3 className="text-sm font-semibold text-red-400 uppercase tracking-wider mb-6">
+        <div className="grid md:grid-cols-2 gap-8 mt-10">
+          <div className="bg-red-500/10 border border-red-500/30 rounded-2xl p-6 opacity-0 animate-fade-in-up animate-delay-200">
+            <h3 className="text-base font-semibold text-red-500 uppercase tracking-wider mb-5 flex items-center gap-2">
+              <XCircle className="w-5 h-5" />
               De uma operação...
             </h3>
             <SlideList
@@ -516,8 +517,9 @@ export const slides = [
               ]}
             />
           </div>
-          <div className="opacity-0 animate-fade-in-up animate-delay-400">
-            <h3 className="text-sm font-semibold text-emerald-400 uppercase tracking-wider mb-6">
+          <div className="bg-emerald-500/10 border border-emerald-500/30 rounded-2xl p-6 opacity-0 animate-fade-in-up animate-delay-400">
+            <h3 className="text-base font-semibold text-emerald-500 uppercase tracking-wider mb-5 flex items-center gap-2">
+              <CheckCircle className="w-5 h-5" />
               Para uma operação...
             </h3>
             <SlideList
@@ -530,6 +532,21 @@ export const slides = [
                 "Preparada para escala"
               ]}
             />
+          </div>
+        </div>
+        
+        {/* Main Benefit Box */}
+        <div className="mt-8 bg-gradient-primary rounded-2xl p-6 opacity-0 animate-fade-in-up animate-delay-500">
+          <div className="flex items-center gap-4">
+            <div className="w-14 h-14 bg-white/20 rounded-xl flex items-center justify-center flex-shrink-0">
+              <TrendingUp className="w-7 h-7 text-white" />
+            </div>
+            <div>
+              <h4 className="text-xl font-bold text-white mb-1">Ganho Esperado: 20% a 40% mais tempo do time por mês</h4>
+              <p className="text-white/80 text-sm">
+                Considerando que cada pessoa gasta em torno de 2 a 4 horas por dia em processos manuais
+              </p>
+            </div>
           </div>
         </div>
       </>
