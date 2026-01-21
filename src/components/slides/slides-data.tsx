@@ -39,50 +39,86 @@ import { SlideList } from "./SlideList";
 import { SlideWorkflow } from "./SlideWorkflow";
 
 export const slides = [
-  // Slide 1 - Cover
+  // Slide 1 - Cover / Diagnóstico
   {
     name: "Capa",
     content: (
       <div className="flex flex-col items-center justify-center min-h-[70vh] text-center">
-        <div className="mb-8 opacity-0 animate-fade-in-up">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-sm font-medium mb-8">
-            <Sparkles className="w-4 h-4" />
-            Plataforma Enterprise
-          </div>
+        <div className="grid grid-cols-2 gap-x-12 gap-y-3 text-left mb-12 opacity-0 animate-fade-in-up">
+          <div className="text-sm text-muted-foreground">Elaborado por:</div>
+          <div className="text-sm text-foreground font-medium">Dadus AI</div>
+          <div className="text-sm text-muted-foreground">Período de Imersão:</div>
+          <div className="text-sm text-foreground font-medium">3 dias operacionais</div>
+          <div className="text-sm text-muted-foreground">Local:</div>
+          <div className="text-sm text-foreground font-medium">São Paulo</div>
+          <div className="text-sm text-muted-foreground">Data:</div>
+          <div className="text-sm text-foreground font-medium">Dezembro de 2025</div>
+          <div className="text-sm text-muted-foreground">Missão:</div>
+          <div className="text-sm text-primary font-medium">Transformação 360°</div>
         </div>
-        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight mb-6 opacity-0 animate-fade-in-up animate-delay-100">
-          <span className="text-gradient-primary">Dadus</span>
-          <span className="text-foreground">.AI</span>
+        <div className="w-24 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent mb-12 opacity-0 animate-fade-in-up animate-delay-100" />
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 opacity-0 animate-fade-in-up animate-delay-200">
+          <span className="text-gradient-primary">Diagnóstico Estratégico</span>
         </h1>
-        <p className="text-xl md:text-2xl lg:text-3xl text-muted-foreground max-w-4xl leading-relaxed opacity-0 animate-fade-in-up animate-delay-200">
-          Plataforma de Workflows e Analytics<br />para E-commerce em Escala
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 opacity-0 animate-fade-in-up animate-delay-200">
+          <span className="text-foreground">Completo</span>
+        </h2>
+        <p className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground opacity-0 animate-fade-in-up animate-delay-300">
+          Kitsy
         </p>
-        <div className="flex items-center gap-6 mt-12 opacity-0 animate-fade-in-up animate-delay-300">
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <Workflow className="w-5 h-5 text-primary" />
-            <span>Automação</span>
-          </div>
-          <div className="w-1 h-1 rounded-full bg-muted-foreground" />
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <BarChart3 className="w-5 h-5 text-primary" />
-            <span>Analytics</span>
-          </div>
-          <div className="w-1 h-1 rounded-full bg-muted-foreground" />
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <Shield className="w-5 h-5 text-primary" />
-            <span>Governança</span>
-          </div>
-        </div>
       </div>
     )
   },
 
-  // Slide 2 - Por que não funciona
+  // Slide 2 - O que não funciona hoje (resumo executivo)
+  {
+    name: "Resumo",
+    content: (
+      <>
+        <SlideTitle slideNumber={1} subtitle="Principais gargalos operacionais identificados">
+          O que não funciona<br />
+          <span className="text-gradient-accent">hoje</span>
+        </SlideTitle>
+        <div className="grid md:grid-cols-2 gap-6 mt-8">
+          <SlideCard
+            icon={FileSpreadsheet}
+            title="Múltiplas planilhas"
+            description="Descentralização de dados e falta de fonte única de verdade"
+            variant="accent"
+            delay={200}
+          />
+          <SlideCard
+            icon={Package}
+            title="Gestão de estoque"
+            description="Processos lentos e imprecisos, divergências massivas"
+            variant="accent"
+            delay={300}
+          />
+          <SlideCard
+            icon={Clock}
+            title="Trabalho manual excessivo"
+            description="Horas diárias gastas movendo dados entre sistemas"
+            variant="accent"
+            delay={400}
+          />
+          <SlideCard
+            icon={Calculator}
+            title="Faturamento incerto"
+            description="Falta de certeza no faturamento e recebíveis"
+            variant="accent"
+            delay={500}
+          />
+        </div>
+      </>
+    )
+  },
+
+  // Slide 3 - Por que não funciona
   {
     name: "O Problema",
     content: (
       <>
-        <SlideTitle slideNumber={1} subtitle="Cada marketplace opera como um 'mundo diferente'">
+        <SlideTitle slideNumber={2} subtitle="Cada marketplace opera como um 'mundo diferente'">
           Por que hoje<br />
           <span className="text-gradient-accent">não funciona?</span>
         </SlideTitle>
@@ -115,12 +151,12 @@ export const slides = [
     )
   },
 
-  // Slide 3 - Gargalo: ERP (BLING)
+  // Slide 4 - Gargalo: ERP (BLING)
   {
     name: "ERP BLING",
     content: (
       <>
-        <SlideTitle slideNumber={2} subtitle="O sistema não atende os requisitos e opera com ineficiência">
+        <SlideTitle slideNumber={3} subtitle="O sistema não atende os requisitos e opera com ineficiência">
           ERP (BLING) como<br />
           <span className="text-gradient-accent">gargalo estrutural</span>
         </SlideTitle>
@@ -157,12 +193,12 @@ export const slides = [
     )
   },
 
-  // Slide 4 - Gargalo: Logística
+  // Slide 5 - Gargalo: Logística
   {
     name: "Logística",
     content: (
       <>
-        <SlideTitle slideNumber={3} subtitle="Processos físicos sem controle adequado">
+        <SlideTitle slideNumber={4} subtitle="Processos físicos sem controle adequado">
           Falhas críticas na<br />
           <span className="text-gradient-accent">logística</span>
         </SlideTitle>
@@ -198,12 +234,12 @@ export const slides = [
     )
   },
 
-  // Slide 5 - Gargalo: Trabalho Manual
+  // Slide 6 - Gargalo: Trabalho Manual
   {
     name: "Trabalho Manual",
     content: (
       <>
-        <SlideTitle slideNumber={4} subtitle="1,5 a 2 horas diárias apenas movendo dados">
+        <SlideTitle slideNumber={5} subtitle="1,5 a 2 horas diárias apenas movendo dados">
           Dependência de<br />
           <span className="text-gradient-accent">processos manuais</span>
         </SlideTitle>
@@ -240,19 +276,19 @@ export const slides = [
     )
   },
 
-  // Slide 6 - O que é Dadus.AI
+  // Slide 7 - Como podemos resolver
   {
     name: "A Solução",
     content: (
       <>
-        <SlideTitle slideNumber={5} subtitle="Crie um ERP modular usando planilhas como input">
-          O que é a<br />
-          <span className="text-gradient-primary">Dadus.AI</span>
+        <SlideTitle slideNumber={6} subtitle="Crie um ERP modular usando planilhas como input">
+          Como podemos<br />
+          <span className="text-gradient-primary">resolver</span>
         </SlideTitle>
         <div className="grid md:grid-cols-2 gap-8 mt-8">
           <div className="space-y-4">
             <p className="text-lg text-muted-foreground leading-relaxed opacity-0 animate-fade-in-up animate-delay-200">
-              A Dadus é uma plataforma de <span className="text-primary font-medium">workflows inteligentes</span> que permite criar virtualmente um ERP usando:
+              Uma plataforma de <span className="text-primary font-medium">workflows inteligentes</span> que permite criar virtualmente um ERP usando:
             </p>
             <SlideList
               variant="arrow"
@@ -279,12 +315,12 @@ export const slides = [
     )
   },
 
-  // Slide 7 - Exemplo: Gestão de Envios
+  // Slide 8 - Exemplo: Gestão de Envios
   {
     name: "Exemplo: Envios",
     content: (
       <>
-        <SlideTitle slideNumber={6} subtitle="Conciliação automatizada com rastreabilidade completa">
+        <SlideTitle slideNumber={7} subtitle="Conciliação automatizada com rastreabilidade completa">
           Workflow: Gestão de<br />
           <span className="text-gradient-primary">envios e auditoria</span>
         </SlideTitle>
@@ -311,12 +347,12 @@ export const slides = [
     )
   },
 
-  // Slide 8 - Exemplo: Estoque
+  // Slide 9 - Exemplo: Estoque
   {
     name: "Exemplo: Estoque",
     content: (
       <>
-        <SlideTitle slideNumber={7} subtitle="Estoque unificado, auditável e previsível">
+        <SlideTitle slideNumber={8} subtitle="Estoque unificado, auditável e previsível">
           Workflow: Atualização<br />
           <span className="text-gradient-primary">de estoque</span>
         </SlideTitle>
@@ -342,12 +378,12 @@ export const slides = [
     )
   },
 
-  // Slide 9 - Analytics e Relatórios
+  // Slide 10 - Analytics e Relatórios
   {
     name: "Analytics",
     content: (
       <>
-        <SlideTitle slideNumber={8} subtitle="Substitua ferramentas de BI tradicionais">
+        <SlideTitle slideNumber={9} subtitle="Substitua ferramentas de BI tradicionais">
           Inteligência e<br />
           <span className="text-gradient-primary">Analytics</span>
         </SlideTitle>
@@ -400,14 +436,14 @@ export const slides = [
     )
   },
 
-  // Slide 10 - Diferenciais
+  // Slide 11 - Diferenciais
   {
     name: "Diferenciais",
     content: (
       <>
-        <SlideTitle slideNumber={9}>
-          Diferenciais estratégicos<br />
-          <span className="text-gradient-primary">da Dadus.AI</span>
+        <SlideTitle slideNumber={10}>
+          Diferenciais<br />
+          <span className="text-gradient-primary">estratégicos</span>
         </SlideTitle>
         <div className="grid md:grid-cols-2 gap-6 mt-8">
           <SlideCard
@@ -452,12 +488,12 @@ export const slides = [
     )
   },
 
-  // Slide 11 - Resultado Esperado
+  // Slide 12 - Resultado Esperado
   {
     name: "Resultado",
     content: (
       <>
-        <SlideTitle slideNumber={10}>
+        <SlideTitle slideNumber={11}>
           Resultado<br />
           <span className="text-gradient-primary">esperado</span>
         </SlideTitle>
