@@ -31,7 +31,10 @@ import {
   XCircle,
   MessageSquare,
   MapPin,
-  Timer
+  Timer,
+  Users,
+  Rocket,
+  HelpCircle
 } from "lucide-react";
 import { SlideTitle } from "./SlideTitle";
 import { SlideCard } from "./SlideCard";
@@ -529,6 +532,82 @@ export const slides = [
           </div>
         </div>
       </>
+    )
+  },
+
+  // Slide 13 - Próximos Passos
+  {
+    name: "Próximos Passos",
+    content: (
+      <>
+        <SlideTitle slideNumber={12} subtitle="Plano de ação para começar a transformação">
+          Próximos<br />
+          <span className="text-gradient-primary">passos</span>
+        </SlideTitle>
+        <div className="grid md:grid-cols-3 gap-6 mt-8">
+          <div className="bg-gradient-card border border-primary/30 rounded-2xl p-8 opacity-0 animate-fade-in-up animate-delay-200 relative">
+            <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
+              1
+            </div>
+            <Users className="w-12 h-12 text-primary mb-4 mt-2" />
+            <h3 className="text-xl font-semibold text-foreground mb-3">Treinamento de IA</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Treinamento presencial de <span className="text-primary font-medium">2 horas</span> para o time sobre IA aplicada à operação
+            </p>
+          </div>
+          <div className="bg-gradient-card border border-primary/30 rounded-2xl p-8 opacity-0 animate-fade-in-up animate-delay-300 relative">
+            <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
+              2
+            </div>
+            <Target className="w-12 h-12 text-primary mb-4 mt-2" />
+            <h3 className="text-xl font-semibold text-foreground mb-3">Alinhamento Estratégico</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Reunião com <span className="text-primary font-medium">Stakeholders</span> para definir prioridades e por onde devemos começar
+            </p>
+          </div>
+          <div className="bg-gradient-card border border-primary/30 rounded-2xl p-8 opacity-0 animate-fade-in-up animate-delay-400 relative">
+            <div className="absolute -top-4 -left-4 w-10 h-10 bg-primary rounded-full flex items-center justify-center text-primary-foreground font-bold text-lg">
+              3
+            </div>
+            <Rocket className="w-12 h-12 text-primary mb-4 mt-2" />
+            <h3 className="text-xl font-semibold text-foreground mb-3">MVP Dadus AI</h3>
+            <p className="text-muted-foreground leading-relaxed">
+              Primeiros testes com <span className="text-primary font-medium">planilhas</span> e implementação MVP da plataforma para resolver os problemas
+            </p>
+          </div>
+        </div>
+        <div className="mt-10 p-4 bg-primary/5 border border-primary/20 rounded-xl opacity-0 animate-fade-in-up animate-delay-500">
+          <p className="text-center text-foreground">
+            <span className="text-primary font-semibold">Objetivo:</span> Iniciar a transformação de forma incremental e validada
+          </p>
+        </div>
+      </>
+    )
+  },
+
+  // Slide 14 - Perguntas e Feedbacks
+  {
+    name: "Perguntas",
+    content: (
+      <div className="flex flex-col items-center justify-center min-h-[70vh] text-center">
+        <div className="mb-8 opacity-0 animate-fade-in-up">
+          <HelpCircle className="w-20 h-20 text-primary mx-auto" />
+        </div>
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-4 opacity-0 animate-fade-in-up animate-delay-100">
+          <span className="text-gradient-primary">Perguntas</span>
+        </h1>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-8 opacity-0 animate-fade-in-up animate-delay-100">
+          <span className="text-foreground">& Feedbacks</span>
+        </h2>
+        <div className="w-24 h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent mb-8 opacity-0 animate-fade-in-up animate-delay-200" />
+        <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl opacity-0 animate-fade-in-up animate-delay-300">
+          Espaço aberto para dúvidas, comentários adicionais e alinhamentos
+        </p>
+        <div className="mt-12 flex items-center gap-3 text-muted-foreground opacity-0 animate-fade-in-up animate-delay-400">
+          <MessageSquare className="w-5 h-5" />
+          <span>Compartilhe suas considerações</span>
+        </div>
+      </div>
     )
   }
 ];
